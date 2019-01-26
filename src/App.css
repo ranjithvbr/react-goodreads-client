@@ -1,32 +1,58 @@
-.App {
-  /* text-align: center; */
+.current-page {
+  font-size: 1.5rem;
+  vertical-align: middle;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.book-card-container {
+  height: 60px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.display-book-detail {
+  font-size: 0.9rem;
 }
 
-.App-link {
-  color: #61dafb;
+.book-author {
+  font-size: 0.7rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.current-page,
+.display-book-detail,
+.book-author {
+  line-height: 1;
+}
+
+/* Override some Bootstrap pagination styles */
+ul.pagination {
+  margin-top: 0;
+  margin-bottom: 0;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+ul.pagination li.page-item.active a.page-link {
+  color: #445565 !important;
+  background-color: #e3e7eb !important;
+  border-color: #ced4da !important;
+}
+ul.pagination a.page-link {
+  padding: 0.75rem 1rem;
+  min-width: 3.5rem;
+  text-align: center;
+  box-shadow: none !important;
+  border-color: #ced4da !important;
+  color: #6b88a4;
+  font-weight: 900;
+  font-size: 1rem;
+}
+ul.pagination a.page-link:hover {
+  background-color: #f4f4f4;
+}
+.spinner {
+  padding-left: 50% !important;
+  font-size: 32px;
+  color: #00bcd4;
+}
+.search-bar {
+  margin-top: 44px;
 }

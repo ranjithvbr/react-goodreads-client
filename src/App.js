@@ -2,9 +2,10 @@ import React, { Component } from "react";
 import "./App.css";
 import Axios from "axios";
 import BookList from "./components/BookList";
+import GOODREADSKEY from "./utils/constant";
 
 // Environment variable "GoodReads sceret key"
-const goodreadsKey = process.env.REACT_APP_API_KEY;
+// const goodreadsKey = btoa(process.env.REACT_APP_API_KEY);
 
 // How many books want to show per page
 const pagePerView = 6;
@@ -33,12 +34,14 @@ class App extends Component {
       computingData: true
     });
     const { searchInput } = this.state;
+    console.log(JSON.stringify(atob("56lRVGo8oQ9LHgkieToQ")));
+
     /**
      * This API enables cross-origin requests to anywhere. (https://cors-anywhere.herokuapp.com/)
      */
     const requestUri =
       `https://cors-anywhere.herokuapp.com/` +
-      `https://www.goodreads.com/search/index.xml?key=${goodreadsKey}&q=${searchInput}`;
+      `https://www.goodreads.com/search/index.xml?key=${GOODREADSKEY}&q=${searchInput}`;
 
     Axios.get(requestUri)
       .then(res => {

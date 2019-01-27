@@ -172,25 +172,25 @@ class App extends Component {
       <React.Fragment>
         <div className="container mb-5">
           <div className="col-12 search-bar">
-              <div className="input-group">
-                <input
-                  className="form-control"
-                  type="text"
-                  placeholder="Search books"
-                  aria-label="Search"
-                  name="searchText"
-                  onChange={this.onTextChange}
-                  value={this.state.searchText}
-                />
-                <div className="input-group-btn">
-                  <button
-                    className="btn btn-default"
-                    onClick={this.onSearchClick}
-                  >
-                    <i className="fa fa-search" />
-                  </button>
-                </div>
+            <div className="input-group">
+              <input
+                className="form-control"
+                type="text"
+                placeholder="Search books"
+                aria-label="Search"
+                name="searchText"
+                onChange={this.onTextChange}
+                value={this.state.searchText}
+              />
+              <div className="input-group-btn">
+                <button
+                  className="btn btn-default"
+                  onClick={this.onSearchClick}
+                >
+                  <i className="fa fa-search" />
+                </button>
               </div>
+            </div>
           </div>
           <div className="row d-flex flex-row py-5">
             <div className="w-100 px-4 py-5 d-flex flex-row flex-wrap align-items-center justify-content-between">
@@ -225,6 +225,14 @@ class App extends Component {
               (error && <p className="text-danger">{error}</p>) || (
                 <BookList books={displayBooks} />
               )
+            )}
+            {displayBooks.length === 0 && (
+              <div className="row col-12 justify-content-center">
+                <h2>
+                  No books are in your shelf. Search it{" "}
+                  <i className="fa fa-book" /> <i className="fa fa-smile-o" />
+                </h2>
+              </div>
             )}
           </div>
         </div>

@@ -10,7 +10,7 @@ describe("<App>", () => {
 
   it("Book empty count header check", () => {
     const wrapper = shallow(<App />);
-    const text = wrapper.find("h2").text();
+    const text = wrapper.find("h2").at(0).text();
     expect(text).toEqual("0 Books");
   });
 

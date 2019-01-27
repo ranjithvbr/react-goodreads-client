@@ -2,11 +2,17 @@ Live Demo [Link](https://rathishvbr.github.io/react-goodreads-client).
 
 ## GoodReads books client
 
-Intagrated with goodreads api, Packed with feature pagination, Integrated with Travis CI and Deployed on github Page. 
+Intagrated with goodreads api, Packed with feature pagination, Unit testcase implemented, Integrated with Travis CI and Deployed on github Page. (CI/CD)
 
 ## What does this product look like ?
 
 ![Dashboard](https://github.com/rathishvbr/react-goodreads-client/blob/master/public/sneakpeak/ss1.png)
+
+## Testcase ?
+
+See build and Testcase logs on Travis CI last log detail.
+
+![Testcase](https://github.com/rathishvbr/react-goodreads-client/blob/master/public/sneakpeak/ss2.png)
 
 ### `npm start`
 
